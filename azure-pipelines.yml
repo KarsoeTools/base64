@@ -13,7 +13,7 @@ resources:
 
 variables:
   tag: "$(Build.BuildId)"
-  repository: "karsoekube/passwords"
+  repository: "karsoekube/base64"
   containerRegistry: "karsoehome"
   application_component_name: "base64"
   major: 1
