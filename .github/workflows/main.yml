@@ -16,7 +16,7 @@ jobs:
         password: ${{ secrets.HARBOR_PASSWORD }}
 
   template:
-    uses: actionTemplates/build/angular.yaml
+    uses: main/actionTemplates/build/angular.yaml
     with:
       REGISTRY: ${{ env.REGISTRY }}
       IMAGE_NAME: chaturmail/chaturmail-backend
