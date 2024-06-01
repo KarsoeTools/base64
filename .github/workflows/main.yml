@@ -22,8 +22,6 @@ jobs:
       IMAGE_NAME: chaturmail/chaturmail-backend
       IMAGE_TAG: ${{ github.run_number }}
 
-
-
   build-part-2:
     runs-on: ubuntu-latest
     steps:
