@@ -11,8 +11,7 @@ jobs:
     steps:
     - uses: docker/login-action@v1
       with:
-        registry: $REGISTRY
-        run_number: ${{ github.run_number }}
+        registry: $REGISTRY        
         username: ${{ secrets.HARBOR_USERNAME  }}
         password: ${{ secrets.HARBOR_PASSWORD }}
 
@@ -21,6 +20,7 @@ jobs:
     
     with:
       registry: $REGISTRY 
+      run_number: ${{ github.run_number }}
       IMAGE_NAME: chaturmail/chaturmail-backend
       IMAGE_TAG: ${{ github.run_number }}
 
