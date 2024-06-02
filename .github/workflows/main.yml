@@ -22,7 +22,7 @@ jobs:
     with:
       registry: $REGISTRY 
       run_number: ${{ github.run_number }}
-      IMAGE_NAME: chaturmail/chaturmail-backend
+      IMAGE_NAME: karsoekube/arm-base64
       IMAGE_TAG: ${{ github.run_number }}
 
   build-part-2:
