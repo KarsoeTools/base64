@@ -15,18 +15,14 @@ jobs:
         registry: $REGISTRY        
         username: ${{ secrets.HARBOR_USERNAME  }}
         password: ${{ secrets.HARBOR_PASSWORD }}
-
-  template:
-    uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main
-    
-    with:
-      registry: $REGISTRY 
-      run_number: ${{ github.run_number }}
-      IMAGE_NAME: karsoekube/arm-base64
+        
+    - uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
+      with:
+        registry: $REGISTRY 
+        run_number: ${{ github.run_number }}
+        IMAGE_NAME: karsoekube/arm-base64
       
-  build-part-2:
-    runs-on: ubuntu-latest
-    steps:
+  
     - name: Clone Repository
       run: |
         git clone <argocd-config-repo-url>
