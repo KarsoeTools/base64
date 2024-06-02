@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
 env:
-  REGISTRY: https://harbor.kube.karsoehome.dk/
+  REGISTRY: https://harbor.mongodb.dk/
 
 jobs:
   build:
