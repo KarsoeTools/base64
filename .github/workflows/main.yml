@@ -15,12 +15,12 @@ jobs:
         registry: $REGISTRY        
         username: ${{ secrets.HARBOR_USERNAME  }}
         password: ${{ secrets.HARBOR_PASSWORD }}
-        
-    - uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
-      with:
-        registry: $REGISTRY 
-        run_number: ${{ github.run_number }}
-        IMAGE_NAME: karsoekube/arm-base64
+  template:      
+  - uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
+    with:
+      registry: $REGISTRY 
+      run_number: ${{ github.run_number }}
+      IMAGE_NAME: karsoekube/arm-base64
       
   
     - name: Clone Repository
