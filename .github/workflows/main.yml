@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
 env:
   REGISTRY: https://harbor.kube.karsoehome.dk/
+  run_number: ${{ github.run_number }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +21,7 @@ jobs:
     
     with:
       registry: $REGISTRY 
-      run_number: ${{ github.run_number }}
+      run_number: $run_number
       IMAGE_NAME: chaturmail/chaturmail-backend
       IMAGE_TAG: ${{ github.run_number }}
 
