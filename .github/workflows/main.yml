@@ -17,6 +17,7 @@ jobs:
 
   template:
     uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main
+    
     with:
       REGISTRY: ${{ env.REGISTRY }}
       IMAGE_NAME: chaturmail/chaturmail-backend
