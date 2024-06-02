@@ -15,13 +15,13 @@ jobs:
         registry: ${{ env.REGISTRY }}       
         username: ${{ secrets.HARBOR_USERNAME }}
         password: ${{ secrets.HARBOR_PASSWORD }}     
-        
-    - uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
-      with:
-        registry: $REGISTRY 
-        run_number: ${{ github.run_number }}
-        IMAGE_NAME: karsoekube/arm-base64
-   
+  harbor:    
+    uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
+    with:
+      registry: $REGISTRY 
+      run_number: ${{ github.run_number }}
+      IMAGE_NAME: karsoekube/arm-base64
+ 
   
     # steps:
     #  runs-on: ubuntu-latest
