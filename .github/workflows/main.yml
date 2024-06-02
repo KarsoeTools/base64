@@ -12,6 +12,7 @@ jobs:
     - uses: docker/login-action@v1
       with:
         registry: $REGISTRY
+        run_number: ${{ github.run_number }}
         username: ${{ secrets.HARBOR_USERNAME  }}
         password: ${{ secrets.HARBOR_PASSWORD }}
 
