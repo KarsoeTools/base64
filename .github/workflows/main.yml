@@ -16,8 +16,8 @@ jobs:
       run_number: ${{ github.run_number }}
       IMAGE_NAME: karsoekube/arm-base64
       PROJECT: base64
-      username: ${{ env.HARBOR_USERNAME  }}
-      password: ${{ env.HARBOR_PASSWORD }}
+      username: ${{ env.username  }}
+      password: ${{ env.password }}
   
     # steps:
     #  runs-on: ubuntu-latest
