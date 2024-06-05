@@ -14,6 +14,7 @@ jobs:
       registry: $REGISTRY 
       run_number: ${{ github.run_number }}
       IMAGE_NAME: karsoekube/arm-base64
+      PROJECT: base64
  
   
     # steps:
