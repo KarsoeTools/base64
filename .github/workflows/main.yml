@@ -11,7 +11,7 @@ jobs:
   harbor:    
     uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
     with:
-      registry: $REGISTRY 
+      registry: ${{ envREGISTRY }}
       run_number: ${{ github.run_number }}
       IMAGE_NAME: karsoekube/arm-base64
       PROJECT: base64
