@@ -1,4 +1,4 @@
-FROM node:16.16.0 as node
+FROM node:16-alpine as node
 WORKDIR /app
 COPY . .
 RUN npm install ng
