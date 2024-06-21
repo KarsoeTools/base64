@@ -6,6 +6,7 @@ on:
 env:
   REGISTRY: harbor.mongodb.dk
 jobs:
+
   harbor:    
     uses: KarsoeTools/actionTemplates/.github/workflows/angular.yaml@main    
     with:
